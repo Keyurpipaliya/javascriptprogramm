@@ -1,22 +1,24 @@
-//  Accept 10 values and count total odd and even numbers.
+ // Write a program to show menu to do math operations. Accept operators (+, -, /, *,
+// %) and two values and do operation as per user choice. 
 
+let prompt = require('prompt-sync')(); 
 
-const prompt = require('prompt-sync') ();
+let a = parseInt(prompt("Enter first number: "));
+let b = parseInt(prompt("Enter second number: "));
+let operator = prompt("Enter operator (+, -, *, /, %): ");
 
-let OddCount = 0;
-let evenCount = 0;
-
-for (let i = 1; i<=10; i++) {
-    let num = parseInt(prompt(`Enter number ${i}: `));
-    if (num % 2 === 0) {
-        evenCount++;
-    } else {
-        OddCount++;
-    }
+if (isNaN(a) || isNaN(b)) {
+    console.log("Please enter valid numbers.");
+} else if ( operator === '+') {
+    console.log("The sum is: " + (a + b)); 
+} else if (operator === '-') {
+    console.log("The difference is: " + (a - b));
+} else if (operator === '*') {
+    console.log("The product is: " + (a * b));
+} else if (operator === '/') {
+    console.log("The quotient is: " + (a / b)); 
+} else if (operator === '%') {
+    console.log("The remainder is: " + (a % b));
+} else {
+    console.log("Invalid operator. please enter one of the following: +, -, *, /, %");  
 }
-
-console.log(`Total even numbers entered: ${evenCount}`);
-console.log(`Total odd numbers enterd: ${OddCount}`);
-
-
-

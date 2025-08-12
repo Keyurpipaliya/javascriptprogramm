@@ -1,14 +1,15 @@
-// Write a program to print sum of odd and even numbers from 1 to 20.
+//  Write a program to check whether a number is negative, positive or zero. 
 
-let prompt = require('prompt-sync') ();
+let prompt = require('prompt-sync')();
 
-let sumOdd = 0;
-let sumEven = 0;
+let number = parseInt(prompt("enter a number: "));
 
-for (let i = 1; i <= 20; i++) {
-    if ( i % 2 === 0) {
-        sumEven += i;
-    } else {
-        sumOdd += i;
-    }
+if(isNaN(number)) {
+    console.log("Please Enter a valid number.");
+} else if (number > 0) {
+    console.log("The number is positive.");
+} else if (number < 0) {
+    console.log("The number is negative.");
+} else {
+    console.log("The number is Zero");
 }

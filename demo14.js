@@ -1,12 +1,21 @@
-// Accept 10 values and count odd numbers.
+// Write a program to input any alphabet and check whether it is vowel or consonant.
 
-let prompt = require('prompt-sync')();
+let prompt = require('prompt-sync') ();
 
-let oddCount = 0;
+let alphabet = prompt("Enter an alphabet:");
 
-for (let i = 1; i<=10; i++) {
-    let numbers = parseInt(prompt(`Enter number ${i}: `));
-    if (numbers % 2 != 0) {
-        oddCount++;
+if (alphabet.length != 1) {
+    console.log("please enter a single alphabet.");
+} else if (alphabet >= 'A' && alphabet <= 'Z') {
+    if (alphabet === 'A' || alphabet === 'E' || alphabet === 'I' || alphabet === 'O' || alphabet === 'U') {
+        console.log("The alphabet is an uppercase vowel.");
+    } else {
+        console.log("The alphabet is an uppercase consonant.");
+    }
+} else if (alphabet >= 'a' && alphabet <= 'z') {
+    if (alphabet === 'a' || alphabet === 'e' || alphabet === 'i' || alphabet === 'o' || alphabet === 'u') {
+        console.log("The alphabet is a lowercase vowel.");
+    } else {
+        console.log("The alphabet is a lowercase consonant.");
     }
 }

@@ -1,19 +1,13 @@
-// Accept 10 values and print even numbers.
+//  Write a program to check whether an age is eligible for voting or not.
 
-let prompt = require('prompt-async') ();
+let prompt = require('prompt-sync')();
 
-let evenNumbers = [];
+let age = parseInt(prompt("Enter your age: "));
 
-for (let i = 0; i <= 10; i++) {
-    let value = parseInt(prompt(` Enter number ${i + 1}: `));
-
-    for(let i = 0; i < 10; i++) {
-        let value = parseInt(prompt(`Enter number ${i + 1}: `));
-        if (value % 2 === 0) {
-            evenNumbers.push(value);
-        }
-    }
-
-    console.log("Even Numbers entered: ", evenNumbers);
+if (isNaN(age)) {
+    console.log("Please enter a valid age.");
+} else if (age >= 18) {
+    console.log("You are eligible to vote.");
+} else {
+    console.log("You are not eligible to vote.");
 }
-

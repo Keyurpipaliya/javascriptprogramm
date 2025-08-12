@@ -1,15 +1,12 @@
-// Accept 10 values and print positive numbers.
+// Write a program to accept 10 values and print its average.
 
-let prompt = require('prompt-sync')();  
+let prompt = require('prompt-sync')();
 
-let positiveNumber = [];
-
+let sum = 0;
 for (let i = 1; i <= 10; i++) {
-    let value = parseFloat(prompt(`Enter value ${i}: `));
-    if (value > 0) {
-        positiveNumber.push(value);
-        console.log(`Positive number ${i}: ${value}`);    
-    } else {
-        console.log(`Value ${i} is not positive: ${value}`);
-    }
+    let value = parseInt(prompt(`Enter value ${i}: `));
+    sum += value;
 }
+
+let average = sum / 10;
+console.log(`The average of the enetered values is: ${average}`);

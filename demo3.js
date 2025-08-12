@@ -1,14 +1,7 @@
-// Accept 10 values and print negative numbers.
+// Write a program to print 10 to 1
 
 let prompt = require('prompt-sync') ();
 
-let negativeNumbers = [];
-
-for (let i = 1; i <= 10; i++) { 
-    let value = parseFloat(prompt(`Enter value ${i}: `));
-    if (value < 0) {
-        negativeNumbers.push(value);
-    }
+for (let i = 10; i >= 1; i--) {
+    console.log(i);
 }
-
-console.log("Negative numbers are:" , negativeNumbers);

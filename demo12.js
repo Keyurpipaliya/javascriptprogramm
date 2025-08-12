@@ -1,16 +1,13 @@
-// Accept 10 values and print odd numbers.
+// Write a program to check whether a number is divisible by 5 or not.
 
-let prompt = require('prompt-sync')();
+let prompt = require('prompt-sync') ();
 
-let oddNumbers = [];
+let number = parseInt(prompt("Enter a number: "));
 
-let number = parseInt(prompt(`Enter is odd number:  , ${i + 1}: `));
-
-for(let i = 0; i<=10; i++) {
-    oddnumber.push(value);
-    if (value % 2 != 0) {
-        oddNumber.push(value);
-    }
-}
-
-console.log("ODd numbers entered", oddNumber);
+if (isNaN(number)) {
+    console.log("Please Enter a valid Number.");
+} else if (number % 5 === 0) {
+    console.log("The number is divisible by 5.");
+} else {
+    console.log("The number is not divisible by 5.");
+} 

@@ -1,18 +1,9 @@
+// Write a program to print sum of 1 to 10
 
+let prompt = require('prompt-sync')();
 
-let prompt = require('prompt-sync')();  
-
-let number1 = prompt("Enter is the first number: ");
-let number2 = prompt("Enter is second number: ");
+let sum = 0;
 
 for (let i = 1; i <= 10; i++) {
-    console.log(`${number1} * ${i} = ${number1 * i}`);
-    console.log(`${number2} * ${i} = ${number2 * i}`);
-
-    console.log("-----");
-
-    console.log(`${number1} + ${i} = ${parseInt(number1) + i}`);
-    console.log(`${number2} + ${i} = ${parseInt(number2) + i}`);
-    console.log("-----");
+    sum += i; // sum = sum + i0
 }
-

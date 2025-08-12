@@ -1,15 +1,24 @@
-// . Accept 10 values and count negative numbers.
+//. Accept 10 values and print negative numbers.
 
-let prompt = require('prompt-sync') ();
+let prompt = require('prompt-sync')(); 
 
-let negativeCount = 0;
+let negativeNumbers = [];
 
 for (let i = 1; i <= 10; i++) {
-    let value = parseFloat(prompt(`Enter value ${i}: `));
+    let value = parseInt(prompt(`Enter value ${i}: `));
     if (value < 0) {
-        negativeCount++;
-        console.log(`Value ${i} is negative: ${value}`);
-    } else {
-            console.log(`Value ${i} is not negative: ${value}`);
-            }
-        }
+        negativeNumbers.push(value);
+    }
+}
+console.log("Negative numbers entered: ", negativeNumbers);
+
+//let prompt = require('prompt-sync')();
+
+//let negativeNumbers = [];
+
+//for (let i = 1; i <= 10; i++) {
+  //  let value = parseInt(prompt(`Enter value ${i}: `));
+  //  if (value < 0) {
+    //    negativeNumbers.push(value);
+   // }
+//}

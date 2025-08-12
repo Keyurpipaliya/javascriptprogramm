@@ -1,13 +1,11 @@
-// . Accept a value and print math table of it.
+ //Write a program to check a given integer and return true if it is within 10 of 100 or 
+//200.
 
-let prompt = require('prompt-sync')();
+let prompt = require('prompt-sync')();  
 
-let value = parseInt(prompt("Enter a number to print its multiplication table: "));
-
-console.log(`Multiplication table of ${value}:`);
-
-for (let i = 1; i <= 10; i++) {
-    console.log(`${value} * ${i} = ${value * i}`);
-    console.log(`${value} + ${i} = ${value + i}`);
-    console.log("-----");
+let number = parseInt(prompt("Enter a number: "));
+if ((Math.abs(100 - number) <= 10) || (Math.abs(200 - number) <= 10)) {
+    console.log("Entered number is within 10 of 100 or 200.");
+} else {
+    console.log("Entered number is not within 10 of 100 or 200.");
 }

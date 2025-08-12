@@ -1,14 +1,18 @@
-// . Accept 10 values and count even numbers.
+// Write a program to input any character and check whether it is alphabet, digit or
+//special character.
 
 let prompt = require('prompt-sync') ();
 
-let evenCount = 0;
+let character = prompt("Enter a character: ");
 
-for (let i = 1; i<=10; i++) {
-    let num = parseInt(prompt(`Enter number ${i}: `));
-    if (num % 2 == 0){
-        evenCount++;
-    }
+if (character.length !== 1) {
+    console.log("Please Enter a single character.");
+} else if (character >= 'A' && character <= 'Z') {
+    console.log("The character is an uppercase alphabet.");
+} else if (character >= 'a' && character <= 'z') {
+    console.log("The character is a lowercase alphabet.");
+} else if (character >= '0' && character <= '9') {
+    console.log("The character is a digit.");
+} else {
+    console.log("The character is a special character.");       
 }
-
-console.log(`Total Even number enterd: ${evenCount}`);
